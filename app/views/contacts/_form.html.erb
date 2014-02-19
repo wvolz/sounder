@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :band %><br>
-    <%= f.text_field :band %>
+    <%= f.select :band, ContactsHelper::BAND %>
   </div>
   <div class="field">
     <%= f.label :mode %><br>
-    <%= f.text_field :mode %>
+    <%= f.select :mode, ContactsHelper::MODE %>
   </div>
   <div class="field">
     <%= f.label :callsign %><br>
