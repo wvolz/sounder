@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  band: MyString
+  mode: MyString
+  callsign: MyString
+  classification: MyString
+  section: MyString
+
+two:
+  band: MyString
+  mode: MyString
+  callsign: MyString
+  classification: MyString
+  section: MyString

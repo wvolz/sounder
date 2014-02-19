@@ -1,0 +1,35 @@
+<h1>Listing contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Band</th>
+      <th>Mode</th>
+      <th>Callsign</th>
+      <th>Classification</th>
+      <th>Section</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.band %></td>
+        <td><%= contact.mode %></td>
+        <td><%= contact.callsign %></td>
+        <td><%= contact.classification %></td>
+        <td><%= contact.section %></td>
+        <td><%= link_to 'Show', contact %></td>
+        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact', new_contact_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Band:</strong>
+  <%= @contact.band %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @contact.mode %>
+</p>
+
+<p>
+  <strong>Callsign:</strong>
+  <%= @contact.callsign %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @contact.classification %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @contact.section %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
