@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>UTC</th>
       <th>Band</th>
       <th>Mode</th>
       <th>Callsign</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
+        <td><%= contact.created_at.strftime("%H:%M:%S") %></td>
         <td><%= contact.band %></td>
         <td><%= contact.mode %></td>
         <td><%= contact.callsign %></td>
