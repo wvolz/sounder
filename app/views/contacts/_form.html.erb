@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field band">
     <%= f.label :band %><br>
     <%= f.select :band, ContactsHelper::BAND %>
   </div>
-  <div class="field">
+  <div class="field mode">
     <%= f.label :mode %><br>
     <%= f.select :mode, ContactsHelper::MODE %>
   </div>
-  <div class="field">
+  <div class="field callsign">
     <%= f.label :callsign %><br>
     <%= f.text_field :callsign %>
   </div>
-  <div class="field">
-    <%= f.label :classification %><br>
+  <div class="field classification">
+    <%= f.label "Class" %><br>
     <%= f.text_field :classification %>
   </div>
-  <div class="field">
+  <div class="field section">
     <%= f.label :section %><br>
     <%= f.text_field :section %>
   </div>
