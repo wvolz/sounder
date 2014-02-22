@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
   <title>Sounder</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -8,7 +10,9 @@
 </head>
 <body>
 
-<%= yield %>
-
+  <section>
+    <%= yield %>
+  </section>
+  
 </body>
 </html>
