@@ -1,3 +1,75 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  color: #222;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #000;
+  &:hover {
+    color: #e9002d;
+  }
+}
+
+section {
+  margin: 1em;
+}
+
+.field, {
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 1em;
+}
+
+.actions {
+  clear: both;
+}
+
+table {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  margin-bottom: 1em;
+}
+
+table th, table td {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 0.25em; /* 4px */
+}
+
+table th {
+  background: #eee;
+}
+
+
+@media only screen and (max-width: 320px) {
+
+  section {
+    margin: 8px;
+  }
+
+  label {
+    display: inline-block;
+    font-size: 12px;
+    padding-bottom: 4px;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .action input[type="submit"] {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+}
