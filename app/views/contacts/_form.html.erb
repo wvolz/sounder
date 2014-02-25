@@ -13,11 +13,11 @@
 
   <div class="field band">
     <%= f.label :band %><br>
-    <%= f.select :band, ContactsHelper::BAND %>
+    <%= f.select :band, ContactsHelper::BAND, :selected => params[:band] %>
   </div>
   <div class="field mode">
     <%= f.label :mode %><br>
-    <%= f.select :mode, ContactsHelper::MODE %>
+    <%= f.select :mode, ContactsHelper::MODE, :selected => params[:mode] %>
   </div>
   <div class="field callsign">
     <%= f.label :callsign %><br>
