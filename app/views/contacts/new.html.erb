@@ -1,9 +1,17 @@
 <% if flash[:notice] %>
-<p class="notice"><i class="fa fa-check-circle-o"></i> <%= flash[:notice] %></p>
+  <section>
+    <p class="notice"><i class="fa fa-check-circle-o"></i> <%= flash[:notice] %></p>
+  </section>
 <% end %>
 
-<%= render 'form' %>
+<section>
+  <%= render 'form' %>
+</section>
 
-<%= render 'recent' %>
+<section>
+  <%= render 'recent' %>
+</section>
 
-<%= link_to 'Complete Logbook', contacts_path %>
+<section>
+  <%= link_to 'Complete Logbook', contacts_path %>
+</section>

@@ -15,7 +15,7 @@ a {
   }
 }
 
-section {
+header, section, footer {
   margin: 1em;
 }
 
@@ -57,9 +57,13 @@ th.detail, td.detail {
   display: table-cell;
 }
 
+.sounder {
+  font-size: small;
+}
+
 @media only screen and (max-width: 320px) {
 
-  section {
+  header, section, footer {
     margin: 8px;
   }
 
