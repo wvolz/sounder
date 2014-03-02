@@ -39,16 +39,23 @@ table {
   margin-bottom: 1em;
 }
 
-table th, table td {
+th, td {
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
   padding: 0.25em; /* 4px */
 }
 
-table th {
+th {
   background: #eee;
 }
 
+th.short, td.short {
+  display: none;
+}
+
+th.detail, td.detail {
+  display: table-cell;
+}
 
 @media only screen and (max-width: 320px) {
 
@@ -74,6 +81,14 @@ table th {
     font-size: 0.9em;
     margin-bottom: 1em;
     width: 100%;
+  }
+
+  th.short, td.short {
+    display: table-cell;
+  }
+
+  th.detail, td.detail {
+    display: none;
   }
 
 }
