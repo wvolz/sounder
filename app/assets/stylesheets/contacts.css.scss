@@ -29,6 +29,10 @@ p.notice {
   margin-bottom: 1em;
 }
 
+input[type="text"] {
+  text-transform: uppercase;
+}
+
 .actions {
   clear: both;
 }

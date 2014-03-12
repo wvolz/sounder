@@ -1,5 +1,8 @@
 class Contact < ActiveRecord::Base
 
+  # normalize callsign, class, section case
+  before_validation :normalize_entries
+
   # Check to make sure all fields are filled
   validates :band, :mode, :callsign, :classification, :section, presence: true
 
@@ -14,5 +17,13 @@ class Contact < ActiveRecord::Base
 
   # Is the section valid?
   validates :section, inclusion: { in: ContactsHelper::ARRL_SECTIONS, message: "%{value} is not a valid ARRL section." }
+
+  private
+
+  def normalize_entries
+    self.callsign.upcase!
+    self.classification.upcase!
+    self.section.upcase!
+  end
 
 end
