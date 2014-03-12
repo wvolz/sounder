@@ -11,27 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field band">
-    <%= f.label :band %><br>
-    <%= f.select :band, ContactsHelper::BAND, :selected => params[:band] %>
-  </div>
-  <div class="field mode">
-    <%= f.label :mode %><br>
-    <%= f.select :mode, ContactsHelper::MODE, :selected => params[:mode] %>
-  </div>
-  <div class="field callsign">
-    <%= f.label :callsign %><br>
-    <%= f.text_field :callsign %>
-  </div>
-  <div class="field classification">
-    <%= f.label "Class" %><br>
-    <%= f.text_field :classification %>
-  </div>
-  <div class="field section">
-    <%= f.label :section %><br>
-    <%= f.text_field :section %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <fieldset>
+    <legend>Contact Entry</legend>
+
+    <div class="field band">
+      <%= f.label :band %><br>
+      <%= f.select :band, ContactsHelper::BAND, :selected => params[:band] %>
+    </div>
+    <div class="field mode">
+      <%= f.label :mode %><br>
+      <%= f.select :mode, ContactsHelper::MODE, :selected => params[:mode] %>
+    </div>
+    <div class="field callsign">
+      <%= f.label :callsign %><br>
+      <%= f.text_field :callsign, :autofocus => 'autofocus' %>
+    </div>
+    <div class="field classification">
+      <%= f.label "Class" %><br>
+      <%= f.text_field :classification %>
+    </div>
+    <div class="field section">
+      <%= f.label :section %><br>
+      <%= f.text_field :section %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </fieldset>
 <% end %>
