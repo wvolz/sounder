@@ -8,6 +8,11 @@ body {
   font-size: 16px;
 }
 
+#container {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
 a {
   color: #000;
   &:hover {
@@ -23,14 +28,46 @@ p.notice {
   color: rgb(0,150,0);
 }
 
-.field, {
+fieldset {
+  border: 1px solid #aaa;
+  margin: 0;
+}
+
+fieldset legend {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0.5em;
+}
+
+.field {
   float: left;
-  margin-right: 2em;
+  margin-right: 1.25em;
   margin-bottom: 1em;
+}
+
+.field.section {
+  margin-right: 0;
 }
 
 input[type="text"] {
   text-transform: uppercase;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  background: rgba(22,62,140,0.8);
+  border: 1px solid rgb(22,62,140);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+
+input[type="submit"]:hover {
+  background: rgba(22,62,140,0.6);
+  border: 1px solid rgba(22,62,140,0.8);
+  color: #333;
 }
 
 .actions {
@@ -38,19 +75,25 @@ input[type="text"] {
 }
 
 table {
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-top: 1px solid #aaa;
+  border-right: 1px solid #aaa;
   margin-bottom: 1em;
+  font-size: 18px;
+  width: 100%;
 }
 
 th, td {
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #aaa;
   padding: 0.25em; /* 4px */
 }
 
 th {
-  background: #eee;
+  background: #ccc;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
 }
 
 th.short, td.short {
@@ -65,10 +108,16 @@ th.detail, td.detail {
   font-size: small;
 }
 
-@media only screen and (max-width: 320px) {
+@media (max-width: 480px) {
 
-  header, section, footer {
-    margin: 8px;
+  #container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .field {
+    float: none;
+    margin-right: 0;
   }
 
   label {
@@ -77,16 +126,51 @@ th.detail, td.detail {
     padding-bottom: 4px;
   }
 
-  h2 {
-    margin-bottom: 8px;
+  input[type="submit"] {
+    width: 100%;
   }
-
-  .action input[type="submit"] {
+  
+  table {
+    font-size: 0.8em;
+    margin-bottom: 1em;
     width: 100%;
   }
 
+  th.short, td.short {
+    display: table-cell;
+  }
+
+  th.detail, td.detail {
+    display: none;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  #container {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  header, section, footer {
+    margin: 8px;
+  }
+
+  .band, .mode {
+    width: 50%;
+  }
+
+  .callsign, .classification, .section {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 275px;
+  }
+
   table {
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 1em;
     width: 100%;
   }
