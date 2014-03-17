@@ -35,7 +35,11 @@
       <%= f.text_field :section %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <% if @contact.errors.any? %>
+        <%= f.submit :class => 'error' %>
+      <% else %>
+        <%= f.submit %>
+      <% end %>
     </div>
   </fieldset>
 <% end %>
