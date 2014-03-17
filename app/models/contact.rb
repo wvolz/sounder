@@ -5,12 +5,14 @@ class Contact < ActiveRecord::Base
   before_validation :strip_whitespace
 
   # Check to make sure all fields are filled
-  validates :band, :mode, :callsign, :classification, :section, presence: true
+  validates :band, :mode, :callsign, presence: true
 
   # Is the band valid?
+  # It should be; select field
   validates :band, inclusion: { in: ContactsHelper::BAND, message: "%{value} is not a valid band." }
 
   # Is the mode valid?
+  # It should be; select field
   validates :mode, inclusion: { in: ContactsHelper::MODE, message: "%{value} is not a valid mode." }
 
   # Is the entry unique?
@@ -18,7 +20,8 @@ class Contact < ActiveRecord::Base
 
   # Is the operating class valid?
   # Any number of transmitters; classes A-F
-  validates :classification, format: { with: /\d+[A-F]/, message: "%{value} is not a valid operating class." }
+  # validates :classification, format: { with: /\d+[A-F]/, message: "Operating class is not valid." }
+  validate :operating_class
 
   # Is the section valid?
   validates :section, inclusion: { in: ContactsHelper::ARRL_SECTIONS, message: "%{value} is not a valid ARRL section." }
@@ -35,6 +38,10 @@ class Contact < ActiveRecord::Base
     self.callsign.gsub!(/\s+/, "") || self.callsign
     self.classification.gsub!(/\s+/, "") || self.classification
     self.section.gsub!(/\s+/, "") || self.section
+  end
+
+  def operating_class 
+    errors.add(:base, "Operating class is not valid.") unless /\d+[A-F]/.match(self.classification)
   end
 
 end
