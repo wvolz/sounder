@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  background: rgba(255,255,255,0.5) image-url("groovepaper.png");
   color: #222;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
@@ -16,7 +17,8 @@ body {
 a {
   color: #000;
   &:hover {
-    color: #e9002d;
+    color: rgb(76, 174, 76);
+    /* color: #e9002d; */
   }
 }
 
@@ -37,6 +39,7 @@ h2.notice {
 }
 
 fieldset {
+  background: rgba(255,255,255,0.9);
   border: 1px solid #aaa;
   margin: 0;
 }
@@ -92,6 +95,7 @@ input[type="submit"]:hover, input[type="submit"]:active {
 }
 
 table {
+  background: rgba(255,255,255,0.9);
   border-top: 1px solid #aaa;
   border-right: 1px solid #aaa;
   margin-bottom: 1em;
@@ -110,7 +114,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background: #efefef;
+  background: #ddd;
 }
 
 th.short, td.short {
