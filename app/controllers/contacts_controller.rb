@@ -26,10 +26,13 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
+    params[:band] = @contact.band
+    params[:mode] = @contact.mode
+
     respond_to do |format|
       if @contact.save
         flash[:notice] = 'Contact successfully added.'
-        format.html { redirect_to action: 'new', :band => @contact.band, :mode => @contact.mode }
+        format.html { redirect_to action: 'new', :band => params[:band], :mode => params[:mode] }
         format.json { render action: 'show', status: :created, location: @contact }
       else
         format.html { render action: 'new' }
