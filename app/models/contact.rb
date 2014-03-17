@@ -14,7 +14,7 @@ class Contact < ActiveRecord::Base
   validates :mode, inclusion: { in: ContactsHelper::MODE, message: "%{value} is not a valid mode." }
 
   # Is the entry unique?
-  validates :callsign, uniqueness: { scope: :band, message: "%{value} is a duplicate entry." }
+  validates :callsign, uniqueness: { scope: [:band, :mode], message: "%{value} is a duplicate entry." }
 
   # Is the section valid?
   validates :section, inclusion: { in: ContactsHelper::ARRL_SECTIONS, message: "%{value} is not a valid ARRL section." }
