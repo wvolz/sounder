@@ -5,7 +5,7 @@ class Contact < ActiveRecord::Base
   before_validation :strip_whitespace
 
   # Check to make sure all fields are filled
-  validates :band, :mode, :callsign, presence: true
+  validates :band, :mode, :callsign, presence: { message: "cannot be blank." }
 
   # Is the band valid?
   # It should be; select field
