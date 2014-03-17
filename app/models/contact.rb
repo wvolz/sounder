@@ -2,6 +2,7 @@ class Contact < ActiveRecord::Base
 
   # normalize callsign, class, section case
   before_validation :normalize_entries
+  before_validation :strip_whitespace
 
   # Check to make sure all fields are filled
   validates :band, :mode, :callsign, :classification, :section, presence: true
@@ -24,6 +25,12 @@ class Contact < ActiveRecord::Base
     self.callsign.upcase!
     self.classification.upcase!
     self.section.upcase!
+  end
+
+  def strip_whitespace
+    self.callsign.gsub!(/\s+/, "") || self.callsign
+    self.classification.gsub!(/\s+/, "") || self.classification
+    self.section.gsub!(/\s+/, "") || self.section
   end
 
 end
