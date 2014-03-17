@@ -14,7 +14,8 @@
   <tbody>
     <% Contact.last(5).reverse.each do |contact| %>
       <tr>
-        <td><%= format_time_short(contact.created_at) %></td>
+        <td class="short"><%= format_time_short(contact.created_at) %></td>
+        <td class="detail"><%= format_time(contact.created_at) %></td>
         <td><%= contact.band %></td>
         <td><%= contact.mode %></td>
         <td><%= contact.callsign %></td>
