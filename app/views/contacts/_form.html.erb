@@ -1,7 +1,10 @@
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2>
+        <i class="fa fa-times-circle"></i>
+        Please fix the following <%= pluralize(@contact.errors.count, "error") %>:
+      </h2>
 
       <ul>
       <% @contact.errors.full_messages.each do |msg| %>

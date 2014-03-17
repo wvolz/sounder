@@ -28,8 +28,12 @@ header, section, footer {
   margin: 1em;
 }
 
-p.notice {
-  color: rgb(0,150,0);
+h2.notice {
+  color: rgb(76, 174, 76);
+}
+
+#error_explanation h2 {
+  color: rgb(212, 63, 58);
 }
 
 fieldset {
