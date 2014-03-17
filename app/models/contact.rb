@@ -16,6 +16,10 @@ class Contact < ActiveRecord::Base
   # Is the entry unique?
   validates :callsign, uniqueness: { scope: [:band, :mode], message: "%{value} is a duplicate entry." }
 
+  # Is the operating class valid?
+  # Any number of transmitters; classes A-F
+  validates :classification, format: { with: /\d+[A-F]/, message: "%{value} is not a valid operating class." }
+
   # Is the section valid?
   validates :section, inclusion: { in: ContactsHelper::ARRL_SECTIONS, message: "%{value} is not a valid ARRL section." }
 
