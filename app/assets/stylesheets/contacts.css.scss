@@ -32,7 +32,14 @@ footer {
   margin-bottom: 0;
 }
 
-
+footer p.ip {
+  font-size: small;
+  font-weight: bold;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 h2 {
   font-size: 1.5em;
@@ -174,6 +181,10 @@ th.detail, td.detail {
   }
 
   th.detail, td.detail {
+    display: none;
+  }
+
+  footer p.ip {
     display: none;
   }
 
