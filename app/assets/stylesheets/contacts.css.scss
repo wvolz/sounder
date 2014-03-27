@@ -3,15 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background: rgba(255,255,255,0.5) image-url("groovepaper.png");
+  background: image-url("groovepaper.png");
   color: #222;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
 }
 
+#wrapper {
+  border-top: 0.5em solid #a71b28;
+}
+
 #container {
   max-width: 960px;
-  margin: 2em auto;
+  margin: 0 auto;
+  padding-top: 0.5em;
 }
 
 a {
@@ -21,6 +26,13 @@ a {
     /* color: #e9002d; */
   }
 }
+
+footer {
+  position: relative;
+  margin-bottom: 0;
+}
+
+
 
 h2 {
   font-size: 1.5em;
@@ -123,10 +135,6 @@ th.short, td.short {
 
 th.detail, td.detail {
   display: table-cell;
-}
-
-.sounder {
-  font-size: small;
 }
 
 @media (max-width: 480px) {

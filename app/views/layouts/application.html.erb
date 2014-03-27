@@ -4,21 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Sounder</title>
+  <%= favicon_link_tag(source='favicon.ico', type: "img/png") %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="wrapper">
+    <div id="container">
 
-  <div id="container">
+      <%= yield %>
 
-    <%= yield %>
+      <footer>
+        <p>Made by <a href="http://sounder.co" title="Sounder"><%= image_tag("sounder.png", alt: "Sounder.co") %></a> with <abbr title="Hugs &amp; Kisses">88s</abbr>.</p>
+      </footer>
 
-    <footer>
-      <p class="sounder">Built by <a href="http://sounder.co" title="Sounder">sounder.co</a></p>
-    </footer>
-
+    </div>
   </div>
-  
+
 </body>
 </html>
