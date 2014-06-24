@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.1'
 
 # Use sqlite3 as the database for Active Record
 group :development do
@@ -53,4 +53,5 @@ gem 'font-awesome-sass'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby "2.0.0"
+ruby "2.1.1"
+#rails-gemset: sounder
