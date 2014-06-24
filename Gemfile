@@ -54,4 +54,3 @@ gem 'font-awesome-sass'
 # gem 'debugger', group: [:development, :test]
 
 ruby "2.1.1"
-#rails-gemset: sounder
