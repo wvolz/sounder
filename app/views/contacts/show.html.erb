@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Created:</strong>
+  <%= @contact.created_at %>
+</p>
+
+<p>
+  <strong>Updated:</strong>
+  <%= @contact.updated_at %>
+</p>
+
+<p>
   <strong>Band:</strong>
   <%= @contact.band %>
 </p>
@@ -23,6 +33,11 @@
 <p>
   <strong>Section:</strong>
   <%= @contact.section %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @contact.note %>
 </p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
