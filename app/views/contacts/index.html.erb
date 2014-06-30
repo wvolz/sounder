@@ -6,17 +6,35 @@
   <table>
     <thead>
       <tr>
+        <th>Contacts</th>
+        <th>Sections</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @contacts.count() %></td>
+        <td><%= @contacts.distinct.count('section') %>/<%= ContactsHelper::ARRL_SECTIONS.count %></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <table>
+    <thead>
+      <tr>
         <th>UTC</th>
         <th>Band</th>
         <th>Mode</th>
         <th>Call Sign</th>
         <th>Operating Class</th>
         <th>Section</th>
-        <!--
+        <th>Note</th>
+        
         <th></th>
         <th></th>
         <th></th> 
-        -->
+        
       </tr>
     </thead>
 
@@ -30,11 +48,12 @@
           <td><%= contact.callsign %></td>
           <td><%= contact.classification %></td>
           <td><%= contact.section %></td>
-          <!--
+          <td><%= contact.note %></td>
+          
           <td><%= link_to 'Show', contact %></td>
           <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
           <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          -->
+          
         </tr>
       <% end %>
     </tbody>

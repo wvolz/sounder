@@ -37,6 +37,10 @@
       <%= f.label :section %><br>
       <%= f.text_field :section %>
     </div>
+    <div class="field note">
+      <%= f.label :note %><br>
+      <%= f.text_field :note %>
+    </div>
     <div class="actions">
       <% if @contact.errors.any? %>
         <%= f.submit :class => 'error' %>
