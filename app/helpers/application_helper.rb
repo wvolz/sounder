@@ -1,5 +1,3 @@
-require 'socket'
-
 module ApplicationHelper
 
   def format_time(datetime)
@@ -11,8 +9,7 @@ module ApplicationHelper
   end
 
   def display_ip_address
-    ip_address = Socket.getaddrinfo(Socket.gethostname, 3000)
-    ip_address[0][2]
+    ip_adrress = request.remote_ip
   end
 
 end

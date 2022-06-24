@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
         format.html { redirect_to action: 'new', :band => params[:band], :mode => params[:mode] }
         format.json { render action: 'show', status: :created, location: @contact }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'new', status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
@@ -49,7 +49,7 @@ class ContactsController < ApplicationController
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render action: 'edit', status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
